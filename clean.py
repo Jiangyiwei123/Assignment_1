@@ -16,7 +16,9 @@ def clean_data(input1, input2, output):
     # Step 4: Save the cleaned data to the specified output file
     merged_data.to_csv(output, index=False)
     print(f"Cleaned data saved to {output}")
-
+    # Print the shape of the output file
+    output_df = pd.read_csv(output)
+    print(f"Output file shape: {output_df.shape}")
 
 if __name__ == "__main__":
     # Check if all 3 required arguments are provided
